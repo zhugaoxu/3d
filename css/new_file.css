@@ -1,0 +1,31 @@
+*{
+	padding:0;
+	margin:0;
+}
+body{
+	background-color: black;
+	overflow:hidden;
+}
+.stage{
+	height:200px;
+	width:200px;
+	position:relative;
+	margin:278px auto;
+	-moz-transform-style:preserve-3d;
+	-webkit-transform-style:preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-ms-transform: perspective(1600px)rotateX(-30deg);
+	-webkit-transform: perspective(1600px)rotateX(-30deg);
+	-moz-transform: perspective(1600px)rotateX(-30deg);
+	transform: perspective(1600px)rotateX(-30deg);
+}
+.stage img{
+	height:200px;
+	width:200px;
+	position:absolute;
+	-webkit-box-reflect:below 10px  -webkit-linear-gradient(rgba(0,0,0,0) 50%, rgba(0,0,0,0.7) 100%);
+	-moz-box-reflect: below 10px -moz-linear-gradient(rgba(0,0,0,0) 50%, rgba(0,0,0,0.7) 100%);
+	-o-box-reflect: below 10px -o-linear-gradient(rgba(0,0,0,0) 50%, rgba(0,0,0,0.7) 100%);
+	box-reflect: below 10px linear-gradient(rgba(0,0,0,0) 50%, rgba(0,0,0,0.7) 100%);
+	}

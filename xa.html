@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			body {
+				perspective: 800px;
+			}
+			
+			.box {
+				height: 200px;
+				width: 200px;
+				border: 2px solid red;
+				margin: 200px auto;
+				position: relative;
+			}
+			
+			.box>img {
+				height: 200px;
+				width: 200px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				transform: rotateX(0deg);
+				-webkit-box-reflect: below 5px linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box">
+			<img class="z" src="img/1.jpg" />
+			<img class="z" src="img/2.jpg" />
+			<img class="z" src="img/3.jpg">
+			<img class="z" src="img/4.jpg" />
+			<img class="z" src="img/5.jpg" />
+			<img class="z" src="img/7.jpg" />
+		</div>
+	</body>
+	<script>
+		var box = document.querySelector('.box');
+		var img = document.getElementsByTagName('img');
+		for(var i = 0; i < img.length; i++) {
+			img[i].style.webkitTransform = 'rotateY(' + i * 60 + 'deg)translateZ(300px)';
+//			img[i].onclick=function(){
+//				var c=i+1;
+//				img[i].style.webkitTransform = 'rotateY(' + c* 60 + 'deg)translateZ(300px)';
+//			}
+		}
+
+		document.ondragstart = function() {
+			return false;
+		}
+		//		var z=document.querySelectorAll('.z');
+		//		for(var m=0;m<z.length;m++){
+		//			z[m].onclick=function(){
+		//						var	n=m+1;
+		//						z[m].style.transform='rotateY('+n*60+'deg)translateZ(300px)'
+		//		}
+	</script>
+
+</html>

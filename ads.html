@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/new_file.css" />
+		<title></title>
+		<style>
+			img{
+				transition: all 2s linear;
+			    	
+			    
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="stage">
+			<img src="img/03AFD5E534D86B79B16A32433C64D84A.jpg"/>
+			<img src="img/0C9891B4FD1A48959A07EAC1B0FBE2DA.jpg"/>
+			<img src="img/17FF0BF394B2297BAF69B5E0724AF526.jpg"/>
+			<img src="img/2C596B2F72D094720DC07EDF712A7B53.jpg"/>
+			<img src="img/4247E37A9EDDB9802E7A04B5AF06611C.jpg"/>
+			<img src="img/46CAA677857FE5A3BFF9710934C04714.jpg"/>
+			<img src="img/6DE7F8EFE0995A96915484B0E03273C4.jpg"/>
+			<img src="img/7C2226B26B2954EB5F169AAF32F7A39D.jpg"/>
+			<img src="img/840F55E2C14CE822C4A767411C9C9D3A.jpg"/>
+			<img src="img/89E3BC77061FEE6C4F1150F260892DAC.jpg"/>
+			<img src="img/9D6C1A1DD6E8B9EC91D7CF63F8724324.jpg"/>
+			<img src="img/B3D917B5D078FE46DAEE4F7C0FC87F95.jpg"/>
+			<img src="img/B8FEC3E21E8C32026002449AB87F0867.jpg"/>
+			<img src="img/D91274D6F8AF3D8987FA15D60082E01C.jpg"/>
+			<img src="img/F6A593A5DE791F11972748DB8C3E17B6.jpg"/>
+			
+		</div>
+	</body>
+	<script src="new_file.js"></script>
+	<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+	<script>
+		   var timer=setInterval(zzh, 1000);
+		   var img = document.getElementsByTagName('img');
+		   var num = 0;
+		   function zzh(){
+			num++;
+			for(var i = 0; i < img.length; i++) {
+				img[i].style.transform = 'rotateY(' + (num + i) * 24 + 'deg)translateZ(500px)';
+			}
+
+		}
+	</script>
+</html>
